@@ -1,37 +1,24 @@
 # 仓库仓储派工管理系统
 
+联系QQ 550798972(可以帮助远程调试 跑通整个代码流程 包括整个项目代码分析)也是我给别人做的一个毕设项目
+
 #### 介绍
-出入库管理、仓库分区管理、基础数据管理、派工管理等功能模块的物资仓储派工管理系统，该系统使用B/S架构，使用SpringBoot和Vue框架进行物资仓储派工管理系统的前后端分离开发
 
-#### 软件架构
-软件架构说明
+**出入库管理**、**物料管理**、**仓库分区管理**、**基础数据管理**、**派工管理**、**系统权限管理**等功能模块的物资仓储派工管理系统，该系统使用B/S架构，使用SpringBoot和Vue框架进行物资仓储派工管理系统的前后端分离开发
 
+#### 部分截图
+出入库
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+![70758416519](img\1707584165193.png)
 
 
-#### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+仓库调度派工
+
+![img](img\2.png)
+
+
+
+
+
+还有权限管理等截图 
