@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.addApplication {
+  /*标签*/
+  /*输入框*/
+  /*每个item间隔*/
+  /*卡片padding*/
+}
+.addApplication .el-dialog__body {
+  padding: 10px 10px;
+  color: #606266;
+  font-size: 14px;
+  word-break: break-all;
+}
+.addApplication .el-form-item--medium .el-form-item__label {
+  line-height: 30px;
+  font-size: 14px;
+}
+.addApplication .el-input--medium .el-input__inner {
+  height: 30px;
+  line-height: 30px;
+}
+.addApplication .el-form-item {
+  margin-bottom: 18px;
+}
+.addApplication .el-card__body {
+  padding: 10px 0;
+}
+.addApplication .el-form-item__content {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=application.css.map */

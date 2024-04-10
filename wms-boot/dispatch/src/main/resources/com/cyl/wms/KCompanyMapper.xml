@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyl.wms.mapper.KCompanyMapper">
+    
+    <resultMap type="KCompany" id="KCompanyResult">
+        <result property="companyId"    column="company_id"    />
+        <result property="companyName"    column="company_name"    />
+        <result property="companyAddress"    column="company_address"    />
+        <result property="companyLead"    column="company_lead"    />
+        <result property="companyPhone"    column="company_phone"    />
+        <result property="establishTime"    column="establish_time"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectKCompanyVo">
+        select company_id, company_name, company_address, company_lead, company_phone, establish_time, create_time, update_time from k_company
+    </sql>
+
+    <select id="selectKCompanyList" parameterType="KCompany" resultMap="KCompanyResult">
+        <include refid="selectKCompanyVo"/>
+        <where>  
+            <if test="companyName != null  and companyName != ''"> and company_name like concat('%', #{companyName}, '%')</if>
+            <if test="companyAddress != null  and companyAddress != ''"> and company_address = #{companyAddress}</if>
+            <if test="companyLead != null  and companyLead != ''"> and company_lead = #{companyLead}</if>
+            <if test="companyPhone != null  and companyPhone != ''"> and company_phone = #{companyPhone}</if>
+            <if test="establishTime != null "> and establish_time = #{establishTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectKCompanyByCompanyId" parameterType="Long" resultMap="KCompanyResult">
+        <include refid="selectKCompanyVo"/>
+        where company_id = #{companyId}
+    </select>
+        
+    <insert id="insertKCompany" parameterType="KCompany">
+        insert into k_company
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="companyId != null">company_id,</if>
+            <if test="companyName != null">company_name,</if>
+            <if test="companyAddress != null">company_address,</if>
+            <if test="companyLead != null">company_lead,</if>
+            <if test="companyPhone != null">company_phone,</if>
+            <if test="establishTime != null">establish_time,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="companyId != null">#{companyId},</if>
+            <if test="companyName != null">#{companyName},</if>
+            <if test="companyAddress != null">#{companyAddress},</if>
+            <if test="companyLead != null">#{companyLead},</if>
+            <if test="companyPhone != null">#{companyPhone},</if>
+            <if test="establishTime != null">#{establishTime},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateKCompany" parameterType="KCompany">
+        update k_company
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="companyName != null">company_name = #{companyName},</if>
+            <if test="companyAddress != null">company_address = #{companyAddress},</if>
+            <if test="companyLead != null">company_lead = #{companyLead},</if>
+            <if test="companyPhone != null">company_phone = #{companyPhone},</if>
+            <if test="establishTime != null">establish_time = #{establishTime},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where company_id = #{companyId}
+    </update>
+
+    <delete id="deleteKCompanyByCompanyId" parameterType="Long">
+        delete from k_company where company_id = #{companyId}
+    </delete>
+
+    <delete id="deleteKCompanyByCompanyIds" parameterType="String">
+        delete from k_company where company_id in 
+        <foreach item="companyId" collection="array" open="(" separator="," close=")">
+            #{companyId}
+        </foreach>
+    </delete>
+</mapper>

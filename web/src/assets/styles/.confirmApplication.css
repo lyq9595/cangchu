@@ -1,0 +1,13 @@
+.confirmApplication .el-dialog {
+  width: 80%;
+}
+.confirmApplication .el-dialog .el-dialog__body {
+  padding: 1rem 0.7rem;
+}
+.confirmApplication .addApplication .el-input--medium .el-input__inner {
+  height: 30px;
+  width: 800px;
+  line-height: 30px;
+}
+
+/*# sourceMappingURL=.confirmApplication.css.map */

@@ -1,0 +1,35 @@
+.addApplication {
+  .el-dialog__body {
+    padding: 10px 10px;
+    color: #606266;
+    font-size: 14px;
+    word-break: break-all;
+  }
+  /*标签*/
+  .el-form-item--medium .el-form-item__label {
+    line-height: 30px;
+    font-size: 14px;
+  }
+/*输入框*/
+  .el-input--medium .el-input__inner {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  /*每个item间隔*/
+  .el-form-item {
+    margin-bottom: 18px;
+
+  }
+  /*卡片padding*/
+  .el-card__body {
+    padding: 10px 0;
+  }
+  .el-form-item__content{
+    margin-right: 0;
+  }
+
+
+}
+
+

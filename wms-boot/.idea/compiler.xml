@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for ruoyi" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../JavaUtil/maven_repository/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../JavaUtil/maven_repository/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../JavaUtil/maven_repository/org/projectlombok/lombok/1.18.4/lombok-1.18.4.jar" />
+          <entry name="$PROJECT_DIR$/../../../JavaUtil/maven_repository/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+        </processorPath>
+        <module name="ruoyi-framework" />
+        <module name="mybatis-plus-demo" />
+        <module name="ruoyi-system" />
+        <module name="dispatch" />
+        <module name="mybatis-plus-api" />
+        <module name="ruoyi-common" />
+        <module name="ruoyi-generator" />
+        <module name="ruoyi-quartz" />
+        <module name="wms" />
+        <module name="ruoyi-admin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="wms-boot" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
